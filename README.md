@@ -5,11 +5,11 @@ ppcg meets Polybench in your NVIDIA card
 
 where 
 
-    ppcg is a source-to source compiler found at http://repo.or.cz/w/ppcg.git
+ ppcg is a source-to source compiler found at http://repo.or.cz/w/ppcg.git
 
-    Polybench is a collection of structured C code    http://www.cse.ohio-state.edu/~pouchet/software/polybench
+ Polybench is a collection of structured C code    http://www.cse.ohio-state.edu/~pouchet/software/polybench
  
-    NVIDIA card is a device you got tired of programming directly
+ NVIDIA card is a device you got tired of programming directly
  
 System requirements:
  1. gcc should be able to link object code created by nvcc so you can later run it on your NVIDIA card. Of course, you got CUDA toolkit, drivers are NVIDIA, so you can run CUDA executables.
