@@ -28,9 +28,13 @@ What my code does.
 2) Does it all work? Yep, always... nearly... 26 tests of 30 produce exactly same result on CPU and GPU... for smallest available datasize DATASIZE=MINI. What happens for the rest 4? One segfault and 3 slightly different results:
 
   diff cholesky_sm_21__MINI.rez cholesky_cpu_MINI.rez 
+
   6c6
+
   \< 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.18 0.00 -nan 0.03 0.03 
+
   \-\-\-
+
   \> 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.18 0.00 0.00 0.03 0.03
 
 (other differencies follow)
