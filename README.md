@@ -12,11 +12,12 @@ where
  NVIDIA card is a device you got tired of programming directly
  
 System requirements:
+--------------------
  1. gcc should be able to link object code created by nvcc so you can later run it on your NVIDIA card. Of course, you got CUDA toolkit, drivers are NVIDIA, so you can run CUDA executables.
- 2. Python. I guess version 2.5-3.3 should do. #Take 2.7.x to be sure
+ 2. Python. I guess version 2.5-3.3 should do (mine is currently 2.7.3).
  
 What my code does.
-
+------------------
 1) For every test in Polybench-c suite,
 
     compiles it into ordinary CPU executable;
