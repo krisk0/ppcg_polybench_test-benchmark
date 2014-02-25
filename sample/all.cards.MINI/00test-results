@@ -1,0 +1,66 @@
+/datamining/correlation/correlation.c passed, cpu time 0.00, card 0 time 0.10
+/datamining/correlation/correlation.c passed, card 1 time 0.09
+/datamining/covariance/covariance.c passed, cpu time 0.00, card 0 time 0.10
+/datamining/covariance/covariance.c passed, card 1 time 0.10
+/linear-algebra/kernels/2mm/2mm.c passed, cpu time 0.00, card 0 time 0.10
+/linear-algebra/kernels/2mm/2mm.c passed, card 1 time 0.09
+/linear-algebra/kernels/3mm/3mm.c passed, cpu time 0.00, card 0 time 0.10
+/linear-algebra/kernels/3mm/3mm.c passed, card 1 time 0.09
+/linear-algebra/kernels/atax/atax.c passed, cpu time 0.00, card 0 time 0.09
+/linear-algebra/kernels/atax/atax.c passed, card 1 time 0.08
+/linear-algebra/kernels/bicg/bicg.c passed, cpu time 0.00, card 0 time 0.09
+/linear-algebra/kernels/bicg/bicg.c passed, card 1 time 0.09
+/linear-algebra/kernels/cholesky/cholesky.c failed with datasize=MINI: CPU-CUDA result mismatch
+/linear-algebra/kernels/cholesky/cholesky.c failed with datasize=MINI: CPU-CUDA result mismatch
+/linear-algebra/kernels/doitgen/doitgen.c passed, cpu time 0.00, card 0 time 0.10
+/linear-algebra/kernels/doitgen/doitgen.c passed, card 1 time 0.09
+/linear-algebra/kernels/gemm/gemm.c passed, cpu time 0.00, card 0 time 0.10
+/linear-algebra/kernels/gemm/gemm.c passed, card 1 time 0.09
+/linear-algebra/kernels/gemver/gemver.c passed, cpu time 0.00, card 0 time 0.10
+/linear-algebra/kernels/gemver/gemver.c passed, card 1 time 0.09
+/linear-algebra/kernels/gesummv/gesummv.c passed, cpu time 0.00, card 0 time 0.09
+/linear-algebra/kernels/gesummv/gesummv.c passed, card 1 time 0.08
+/linear-algebra/kernels/mvt/mvt.c passed, cpu time 0.00, card 0 time 0.09
+/linear-algebra/kernels/mvt/mvt.c passed, card 1 time 0.09
+/linear-algebra/kernels/symm/symm.c passed, cpu time 0.00, card 0 time 0.15
+/linear-algebra/kernels/symm/symm.c passed, card 1 time 0.13
+/linear-algebra/kernels/syr2k/syr2k.c passed, cpu time 0.00, card 0 time 0.10
+/linear-algebra/kernels/syr2k/syr2k.c passed, card 1 time 0.09
+/linear-algebra/kernels/syrk/syrk.c passed, cpu time 0.00, card 0 time 0.10
+/linear-algebra/kernels/syrk/syrk.c passed, card 1 time 0.09
+/linear-algebra/kernels/trisolv/trisolv.c passed, cpu time 0.00, card 0 time 0.08
+/linear-algebra/kernels/trisolv/trisolv.c passed, card 1 time 0.08
+/linear-algebra/kernels/trmm/trmm.c failed with datasize=MINI: CPU-CUDA result mismatch
+/linear-algebra/kernels/trmm/trmm.c failed with datasize=MINI: CPU-CUDA result mismatch
+/linear-algebra/solvers/durbin/durbin.c passed, cpu time 0.00, card 0 time 0.09
+/linear-algebra/solvers/durbin/durbin.c passed, card 1 time 0.08
+Failed to run cuda code dynprog_sm_30__MINI, command:
+{ ./dynprog_sm_30__MINI 0 ;} 2> dynprog_sm_30__MINI.rez 1>dynprog_sm_30__MINI.segfault
+/bin/sh: line 1:  3408 Segmentation fault      ./dynprog_sm_30__MINI 0
+/linear-algebra/solvers/dynprog/dynprog.c failed with datasize=MINI: problem running CUDA executable
+Failed to run cuda code dynprog_sm_21__MINI, command:
+{ ./dynprog_sm_21__MINI 1 ;} 2> dynprog_sm_21__MINI.rez 1>dynprog_sm_21__MINI.segfault
+/bin/sh: line 1:  3412 Segmentation fault      ./dynprog_sm_21__MINI 1
+/linear-algebra/solvers/dynprog/dynprog.c failed with datasize=MINI: problem running CUDA executable
+/linear-algebra/solvers/gramschmidt/gramschmidt.c passed, cpu time 0.01, card 0 time 0.11
+/linear-algebra/solvers/gramschmidt/gramschmidt.c passed, card 1 time 0.10
+/linear-algebra/solvers/lu/lu.c passed, cpu time 0.00, card 0 time 0.10
+/linear-algebra/solvers/lu/lu.c passed, card 1 time 0.09
+/linear-algebra/solvers/ludcmp/ludcmp.c passed, cpu time 0.00, card 0 time 0.09
+/linear-algebra/solvers/ludcmp/ludcmp.c passed, card 1 time 0.08
+/medley/floyd-warshall/floyd-warshall.c passed, cpu time 0.00, card 0 time 0.10
+/medley/floyd-warshall/floyd-warshall.c passed, card 1 time 0.09
+/medley/reg_detect/reg_detect.c passed, cpu time 0.00, card 0 time 0.09
+/medley/reg_detect/reg_detect.c passed, card 1 time 0.08
+/stencils/adi/adi.c passed, cpu time 0.00, card 0 time 0.10
+/stencils/adi/adi.c passed, card 1 time 0.09
+/stencils/fdtd-2d/fdtd-2d.c failed with datasize=MINI: CPU-CUDA result mismatch
+/stencils/fdtd-2d/fdtd-2d.c failed with datasize=MINI: CPU-CUDA result mismatch
+/stencils/fdtd-apml/fdtd-apml.c passed, cpu time 0.35, card 0 time 0.47
+/stencils/fdtd-apml/fdtd-apml.c passed, card 1 time 0.45
+/stencils/jacobi-1d-imper/jacobi-1d-imper.c passed, cpu time 0.00, card 0 time 0.09
+/stencils/jacobi-1d-imper/jacobi-1d-imper.c passed, card 1 time 0.08
+/stencils/jacobi-2d-imper/jacobi-2d-imper.c passed, cpu time 0.00, card 0 time 0.10
+/stencils/jacobi-2d-imper/jacobi-2d-imper.c passed, card 1 time 0.09
+/stencils/seidel-2d/seidel-2d.c passed, cpu time 0.00, card 0 time 0.10
+/stencils/seidel-2d/seidel-2d.c passed, card 1 time 0.09
