@@ -29,9 +29,9 @@ What my code does.
 
 diff cholesky_sm_21__MINI.rez cholesky_cpu_MINI.rez 
 6c6
-;lt 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.18 0.00 -nan 0.03 0.03 
-here-go-3-minus
-;gt 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.18 0.00 0.00 0.03 0.03
+\< 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.18 0.00 -nan 0.03 0.03 
+\-\-\-
+\> 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.18 0.00 0.00 0.03 0.03
 (other differencies follow)
 
 And don't ask me what happens with larger data such as DATASIZE=STANDARD. Just run that yourself.
