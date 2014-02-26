@@ -26,3 +26,7 @@ For every test in Polybench-c suite,
 How does it all work? Great, sometimes... 26 tests of 30 produce exactly same result on CPU and GPU... for smallest available datasize DATASIZE=MINI. What happens for the rest 4? One segfault and 3 slightly different results. Well, at least I think the difference is slight. Get *.rez* files from *sample/all.cards.MINI* and see for yorself
 
 *diff cholesky_sm_21__MINI.rez cholesky_cpu_MINI.rez*
+
+Quick start
+-----------
+Compile *cuda_cardz.c*, place two executables *cuda_cardz* and *ppcg_polybench_benchmark.py*, run script *sample/all.cards.MINI/runme*, modify it if needed.
