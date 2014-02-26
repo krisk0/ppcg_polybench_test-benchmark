@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# run test on all videocards, with smallest dataset size, 
+#  never deleting any file, putting results into /tmp/00test-*
+
 cuda_cardz all |
  DATASET_SIZE=MINI SCRATCH=/tmp/temp DELETE_POLICY=never \
  EPSILON=0 POLYBENCH=/usr/share/polybench-c-3.2 \
