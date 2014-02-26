@@ -1,9 +1,8 @@
 ppcg_polybench_test-benchmark
 =============================
 
-ppcg meets Polybench in your NVIDIA card
+ppcg meets Polybench in your NVIDIA card, where 
 
-where 
 * `ppcg <http://repo.or.cz/w/ppcg.git>`_ is a source-to source compiler 
 * `Polybench <http://www.cse.ohio-state.edu/~pouchet/software/polybench>`_ is a collection of structured C code    
 * NVIDIA card is a device you got tired of programming directly
@@ -11,7 +10,7 @@ where
 System requirements:
 --------------------
  1. ppcg tool, Polybench-C test-suite, NVIDIA toolkit, ability to run CUDA executables;
- 2. NVIDIA toolchain should include gcc (or at least gcc should be able to link object code created by nvcc)
+ 2. NVIDIA toolchain should include gcc (or at least gcc should be able to link object code created by nvcc);
  3. Python, any version about 2.5-3.3 should do (mine is currently 2.7.3).
  
 What my code does.
