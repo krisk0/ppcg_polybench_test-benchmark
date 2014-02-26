@@ -21,6 +21,7 @@ IUSE='no_pet test'
 DEPEND="  >=sys-devel/llvm-3.3 
          >=sys-devel/clang-3.3
  test? ( dev-util/nvidia-cuda-toolkit app-benchmarks/polybench-c )
+ dev-libs/isl
  dev-libs/libyaml"   # 0.1.5 appears to work
 
 KEYWORDS="amd64 x86 amd64-linux x86-linux" # stolen from nvidia-cuda-tookit
