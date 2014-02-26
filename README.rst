@@ -13,8 +13,10 @@ System requirements:
  2. NVIDIA toolchain should include gcc (or at least gcc should be able to link object code created by nvcc);
  3. Python, any version about 2.5-3.3 should do (mine is currently 2.7.3).
  
-What my code does.
-------------------
+What my code does
+-----------------
+
+
 .. code::
  For every test in Polybench-c suite,
   compiles it into ordinary CPU executable;
