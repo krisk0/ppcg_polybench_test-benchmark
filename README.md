@@ -4,12 +4,9 @@ ppcg_polybench_test-benchmark
 ppcg meets Polybench in your NVIDIA card
 
 where 
-
- ppcg is a source-to source compiler found at http://repo.or.cz/w/ppcg.git
-
- Polybench is a collection of structured C code    http://www.cse.ohio-state.edu/~pouchet/software/polybench
- 
- NVIDIA card is a device you got tired of programming directly
+* `ppcg <http://repo.or.cz/w/ppcg.git>`_ is a source-to source compiler 
+* `Polybench <http://www.cse.ohio-state.edu/~pouchet/software/polybench>`_ is a collection of structured C code    
+* NVIDIA card is a device you got tired of programming directly
  
 System requirements:
 --------------------
