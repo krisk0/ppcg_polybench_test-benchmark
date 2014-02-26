@@ -2,6 +2,6 @@
 
 cuda_cardz all |
  DATASET_SIZE=MINI SCRATCH=/tmp/temp DELETE_POLICY=never \
- EPSILON=0 POLYBENCH=/usr/share/polybench-c-3. \
+ EPSILON=0 POLYBENCH=/usr/share/polybench-c-3.2 \
  TGT_PREFIX=/tmp/00test- \
  ppcg_polybench_benchmark.py 
