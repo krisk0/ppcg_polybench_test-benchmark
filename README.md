@@ -13,31 +13,20 @@ where
  
 System requirements:
 --------------------
- 1. gcc should be able to link object code created by nvcc so you can later run it on your NVIDIA card. Of course, you got CUDA toolkit, drivers are NVIDIA, so you can run CUDA executables.
- 2. Python. I guess version 2.5-3.3 should do (mine is currently 2.7.3).
+ 1. ppcg tool, Polybench-C test-suite, NVIDIA toolkit, ability to run CUDA executables;
+ 2. NVIDIA toolchain should include gcc (or at least gcc should be able to link object code created by nvcc)
+ 3. Python, any version about 2.5-3.3 should do (mine is currently 2.7.3).
  
 What my code does.
 ------------------
-1) For every test in Polybench-c suite,
+For every test in Polybench-c suite,
 
     compiles it into ordinary CPU executable;
     asks ppcg to automagically convert it;
     crunches it here and there so it compiles;
     compile the crunched code to object code with nvcc;
-    link result with gcc. That's where you need gcc.
+    link result with gcc (this step is possible if requirement 2 is met)
     
-2) Does it all work? Yep, always... nearly... 26 tests of 30 produce exactly same result on CPU and GPU... for smallest available datasize DATASIZE=MINI. What happens for the rest 4? One segfault and 3 slightly different results:
+How does it all work? Great, sometimes... 26 tests of 30 produce exactly same result on CPU and GPU... for smallest available datasize DATASIZE=MINI. What happens for the rest 4? One segfault and 3 slightly different results. Well, at least I think the difference is slight. Get .rez files from sample/all.cards.MINI and see for yorself
 
-  diff cholesky_sm_21__MINI.rez cholesky_cpu_MINI.rez 
-
-  6c6
-
-  \< 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.18 0.00 -nan 0.03 0.03 
-
-  \-\-\-
-
-  \> 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.03 0.18 0.00 0.00 0.03 0.03
-
-(other differencies follow)
-
-And don't ask me what happens with larger data such as DATASIZE=STANDARD. Just run that yourself.
+<code>diff cholesky_sm_21__MINI.rez cholesky_cpu_MINI.rez<\code>
