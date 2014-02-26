@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 # -*- coding: utf-8
 
 # This program is part of ppcg_polybench_test-benchmark
@@ -60,7 +60,8 @@ Lflags=None
 
 def get_tgt_prefix(p):
  p=p.strip()
- if p.find('\\')!=-1:
+ if p.find( '\\' )!=-1:
+  print 'is'
   print 'Backslashes in environment variables defining filenames not supported'
   sys.exit(1)
  if p.find('/')==-1:
