@@ -16,6 +16,7 @@ System requirements:
 What my code does
 -----------------
 For every test in Polybench-c suite,
+
 1) compiles it into ordinary CPU executable;
 2) asks ppcg to automagically convert it;
 3) crunches it here and there so it compiles;
