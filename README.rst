@@ -16,11 +16,11 @@ System requirements:
 What my code does.
 ------------------
 For every test in Polybench-c suite,
-1. compiles it into ordinary CPU executable;
-2. asks ppcg to automagically convert it;
-3. crunches it here and there so it compiles;
-4. compile the crunched code to object code with nvcc;
-5. link result with gcc (this step is possible if requirement 2 is met)
+ 1. compiles it into ordinary CPU executable;
+ 2. asks ppcg to automagically convert it;
+ 3. crunches it here and there so it compiles;
+ 4. compile the crunched code to object code with nvcc;
+ 5. link result with gcc (this step is possible if requirement 2 is met)
     
 How does it all work? Great, sometimes... 26 tests of 30 produce exactly same result on CPU and GPU... for smallest available datasize DATASIZE=MINI. What happens for the rest 4? One segfault and 3 slightly different results. Well, at least I think the difference is slight. Get *.rez* files from *sample/all.cards.MINI* and see for yorself
 
