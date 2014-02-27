@@ -6,7 +6,7 @@ inherit eutils
 
 DESCRIPTION="PolyBench/C: set of C code to benchmark/test code transform tools"
 HOMEPAGE=http://www.cse.ohio-state.edu/~pouchet/software/polybench
-SRC_URI=$HOMEPAGE/download/polybench-c-3.2.tar.gz
+SRC_URI=$HOMEPAGE/download/$P.tar.gz
 doc="README AUTHORS"
 DOCS=( $doc )
 SLOT=0
