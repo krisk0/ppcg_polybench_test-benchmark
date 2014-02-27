@@ -17,6 +17,6 @@ src_install()
  {
   default
   rm $doc
-  insinto /usr/share/$P
+  insinto "$EPREFIX/usr/share/$P"
   doins -r .
  }
