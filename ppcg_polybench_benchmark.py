@@ -163,7 +163,7 @@ def statistic():
     j=len(j)
     if m<j:
      m=j
-   for i in d.items():
+   for i in sorted(d.items()):
     o.write( fill_to_(m,i[0])+(' %.2f\n' % i[1]) )
   o.write( 'Total time spent: %.2f\n' % loop_time )
 
@@ -229,16 +229,11 @@ def dont_run_ppcg_again( cflags, c_file, arch, f_pref ):
  return ff,e
 
 def ppcg_code_is_here( tgt, arch_new ):
- arch_old=arch_list_0
- if arch_old==arch_new:
+ if arch_list_0==arch_new:
   return 0
- arch_old,arch_new = '_'+arch_old+'__','_'+arch_new+'__'
+ arch_old,arch_new = '_'+arch_list_0+'__','_'+arch_new+'__'
  tgt0,tgt1=tgt[0],tgt[1]
  sou0,sou1=tgt0.replace( arch_new, arch_old ),tgt1.replace( arch_new, arch_old )
- if sou0==tgt0 or sou1==tgt1:
-  log('Internal error in ppcg_code_is_here(), arch_new/old='+arch_new+'/' )
-  log(arch_old+' tgt0/1='+tgt0+'/'+tgt1+' sou0/1='+sou0+'/'+sou1+'\n' )
-  sys.exit(1)
  run_exe( ['cp',sou0,tgt0] ),run_exe( ['cp',sou1,tgt1] )
  return 1
 
@@ -284,12 +279,13 @@ def nvcc_compile(i_nick,i,size,arch,hint):
 
 def ask_nvcc_for_lflags( i ):
  ' ask nvcc to print -L and -l flags '
- import shlex
+ ' could use nvcc -run instead of nvcc -dryrun '
+ import shlex   # delay import, for quicker start
  def st(x):
   if len(x)<3:
    return 
   i=0
-  if x[0] in """'\"""":
+  if x[0] in "'\"":
    i += 1
   if x[i]=='-':
    return x[i+1]
@@ -297,13 +293,11 @@ def ask_nvcc_for_lflags( i ):
  a=a.replace('#','')
  b,p,l=shlex.shlex(a),None,[]
  for i in b:
-  j=i
   if i != '-' and p=='-':
-   j=p+i
-   l.append( j )
+   l.append( p+i )
   else:
    if len(i)>1:
-    l.append(j)
+    l.append(i)
   p=i
  for i in l:
   if st(i) in ('l','L'):
@@ -312,9 +306,9 @@ def ask_nvcc_for_lflags( i ):
   log( 'a='+a+'\n' )
   log( 'l='+str(l)+'\n' )
   for i in l:
-   log( 'substr: '+i+'\n' )
-  log( 'ask_nvcc_for_lflags() failed, don\'t know linking flags,'+
-       ' can\'t continue\n' ),sys.exit(1)
+   log( ' substr: '+i+'\n' )
+  log( "ask_nvcc_for_lflags() failed, don't know linking flags,"+
+       " can't continue\n" ),sys.exit(1)
  return ' '+r+'-lstdc++ '
 
 def patch_CUDA_c( f_main, f_kern ):
@@ -894,7 +888,7 @@ def test_passed(i,s,t,m):
   j += ' mismatch: %s' % m
  log(j+'\n')
  with open(tgt_prefix+'full_time','ab') as o:
-  for x in t.items():
+  for x in t.items()[::-1]:
    o.write( i+'|'+x[0]+'|'+('%0.4f\n' % x[1]) )
 
 def sum_time( tt, d ):
