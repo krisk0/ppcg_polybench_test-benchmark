@@ -10,7 +10,7 @@ HOMEPAGE=https://github.com/krisk0/$PN
 SRC_URI="$HOMEPAGE/archive/$PV.zip -> $P.zip"
 RESTRICT='mirror test'
 DOCS=( README.rst sample/all.cards.MINI/runme )
-PYTHON_DEPEND="2"
+PYTHON_DEPEND=2
 SLOT=0
 
 src_compile()
